@@ -18,6 +18,7 @@ jobs:
       JOB_TYPE: BUILD
     steps:
       - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v4.2.2
         with:
           repository: acidanthera/MacKernelSDK
           path: MacKernelSDK
@@ -38,7 +39,7 @@ jobs:
           
       - name: Upload to Release
         if: github.event_name == 'release'
-        uses: svenstaro/upload-release-action@v2.9.0
+        uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: build/*/*.zip
