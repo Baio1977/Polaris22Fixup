@@ -41,7 +41,7 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
-         file: ./*.zip
+         file: build/*/*.zip
          tag: ${{ github.ref }}
          release_name: EFI DellVostro5501 Hackintosh
          body: ${{ github.event_name != 'release' && github.event.head_commit.message || '' }}
