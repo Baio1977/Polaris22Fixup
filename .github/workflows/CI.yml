@@ -13,7 +13,7 @@ env:
 jobs:
   build:
     name: Build
-    runs-on: macos-13
+    runs-on: macos-lates
     env:
       JOB_TYPE: BUILD
     steps:
