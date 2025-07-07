@@ -7,7 +7,7 @@ This KEXT fixes known graphics issues with Polaris22/VegaM on OSX. Only tested/s
 
 ## Installation
 
-* You need Lilu 1.7.0 or newer as older versions had incompatibilities
+* You need Lilu 1.7.1 or newer as older versions had incompatibilities
 * Install the KEXT along with Lilu
 
 ## Implementation
