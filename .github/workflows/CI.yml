@@ -13,12 +13,12 @@ env:
 jobs:
   build:
     name: Build
-    runs-on: macos-13
+    runs-on: macos-latest
     env:
       JOB_TYPE: BUILD
     steps:
-      - uses: actions/checkout@v4.2.2
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           repository: acidanthera/MacKernelSDK
           path: MacKernelSDK
@@ -32,13 +32,13 @@ jobs:
       - run: xcodebuild -configuration Release
 
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v5
         with:
           name: Artifacts
           path: build/*/*.zip
           
       - name: Upload build
-        uses: svenstaro/upload-release-action@2.9.0
+        uses: svenstaro/upload-release-action@2.11.2
         if: github.event_name != 'pull_request'
         with:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -50,12 +50,12 @@ jobs:
          
   analyze-clang:
     name: Analyze Clang
-    runs-on: macos-13
+    runs-on: macos-latest
     env:
       JOB_TYPE: ANALYZE
     steps:
-      - uses: actions/checkout@v4.2.2
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           repository: acidanthera/MacKernelSDK
           path: MacKernelSDK
