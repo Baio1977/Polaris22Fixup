@@ -54,8 +54,8 @@ jobs:
     env:
       JOB_TYPE: ANALYZE
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.1
         with:
           repository: acidanthera/MacKernelSDK
           path: MacKernelSDK
