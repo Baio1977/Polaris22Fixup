@@ -1,3 +1,5 @@
+[![CI](https://github.com/Baio1977/Polaris22Fixup/actions/workflows/CI.yml/badge.svg)](https://github.com/Baio1977/Polaris22Fixup/actions/workflows/CI.yml)
+
 Polaris22 Driver Fixup
 ======================
 This KEXT fixes known graphics issues with Polaris22/VegaM on OSX. Only tested/supported on 10.14+.
